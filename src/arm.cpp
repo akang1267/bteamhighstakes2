@@ -4,7 +4,6 @@
 #include "lemlib/pid.hpp"
 #include "PID.hpp"
 
-
 Arm::Arm(int8_t port, int8_t port2, int8_t port3) 
 : armMotor1{port}, armMotor2{port2}, rotationalSensor{port3}
 {}; 
