@@ -19,16 +19,6 @@ lemlib::Drivetrain drivetrain(&left_mg, // left motor group
                               8 // horizontal drift is 2 (for now)
 );
 pros::Imu imu(ports::INERT);
-// pros::Rotation rs(ports::ROTAT_PORT);
-// double lb_target;
-// void set_lb_target(double target) {
-//     lb_target = target;
-// }
-// lemlib::PID lb_pid (0.2,      // kP
-//                    0,        // kI
-//                    0.04,     // kD
-//                    5,        // integral anti windup range
-//                    false);   // don't reset integral when sign of error flips)
 
 lemlib::OdomSensors sensors(nullptr, // vertical tracking wheel 1, set to null
                             nullptr, // vertical tracking wheel 2, set to nullptr as we are using IMEs
