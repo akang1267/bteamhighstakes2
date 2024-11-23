@@ -30,9 +30,6 @@ class Arm {
     void reset();
     void stop();
     void set_voltage(int32_t voltage);
-    void move_up_middle();
-    void reach_up();
-    void back_to_rest();
     void armTask();
     void setArmHeight(double height);
     int32_t g_angle();

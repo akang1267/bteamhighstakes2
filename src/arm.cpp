@@ -55,37 +55,3 @@ void Arm::set_voltage(int32_t voltage){
     armMotor1.move_voltage(voltage);
     armMotor2.move_voltage(voltage);
 }
-void Arm::move_up_middle(){
-    if(rotationalSensor.get_position() < 3650){
-        armMotor1.move_voltage(constants::ARM_VOLT);
-        armMotor2.move_voltage(constants::ARM_VOLT);
-    }
-    else{
-        armMotor1.brake();
-        armMotor2.brake();
-    }
-
-}
-
-void Arm::reach_up(){
-    if(rotationalSensor.get_position() < 17500){
-        armMotor1.move_voltage(constants::ARM_VOLT);
-        armMotor2.move_voltage(constants::ARM_VOLT);
-    }
-    else{
-        armMotor1.brake();
-        armMotor2.brake();
-        done = true;
-    }
-}
-
-void Arm::back_to_rest(){
-    if(rotationalSensor.get_position() > 3500){
-        armMotor1.move_voltage(-constants::ARM_VOLT);
-        armMotor2.move_voltage(-constants::ARM_VOLT);
-    }
-    else{
-        armMotor1.brake();
-        armMotor2.brake();
-    }
-}
